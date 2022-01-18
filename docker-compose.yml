@@ -13,6 +13,6 @@ services:
       - "/app/node_modules"
     environment:
       - "APP_ENV=development"
-      - "NEXT_PUBLIC_APP_VERSION=v1.1.1"
+      - "NEXT_PUBLIC_APP_VERSION=$NEXT_PUBLIC_APP_VERSION"
     ports:
       - "3000:3000"
