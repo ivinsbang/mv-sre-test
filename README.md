@@ -43,9 +43,11 @@ List the ready features here:
 
 ![dimage](.pic/image-size.PNG)
 ## Usage
-- Deploy development node image version 1.1.1
+- Deploy development node image version 1.0.0
 
 `$ cd mv-sre-test`
+
+`$ export NEXT_PUBLIC_APP_VERSION=v1.0.0`
 
 `$ docker-compose up -d`
 
