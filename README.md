@@ -59,7 +59,7 @@ List the ready features here:
 
 `$ docker build -f Dockerfile  --build-arg NEXT_PUBLIC_APP_VERSION=1.2.2 -t mv_node_prod_image .`
 
-`$ docker run  -d -p 3001:3001 mv_node_prod_image `
+`$ docker run  -d -p 3001:3000 mv_node_prod_image `
 
 `$ curl http://localhost:3001/   or http://localhost:3001`
 
