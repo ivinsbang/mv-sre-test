@@ -51,8 +51,6 @@ List the ready features here:
 
 `$ docker-compose up -d`
 
-`$ docker run -d mv-sre-test_dev_app . . `
-
 `$ curl http://localhost:3000/   or http://localhost:3000`
 
 - Deploy Production node image version 1.2.2
