@@ -33,7 +33,7 @@ List the ready features here:
 
     `$ git clone`
 
-    `$ cd`
+    `$ cd mv-sre-test`
     
 - Directory tree structure
 
@@ -45,7 +45,7 @@ List the ready features here:
 ## Usage
 - Deploy development node image version 1.1.1
 
-`$ cd `
+`$ cd mv-sre-test`
 
 `$ docker-compose up -d`
 
