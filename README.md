@@ -31,7 +31,7 @@ List the ready features here:
 ## Setup
 - clone git repo.
 
-    `$ git clone`
+    `$ git clone https://github.com/ivinsbang/mv-sre-test.git`
 
     `$ cd mv-sre-test`
     
