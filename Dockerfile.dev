@@ -1,0 +1,25 @@
+# base image
+FROM node:erbium-alpine3.15
+
+# shell variables at build-time
+ENV PATH="/app/node_modules/.bin:$PATH" \
+    PORT="3000"
+
+# create app directory
+RUN mkdir -p /app
+WORKDIR /app
+
+# both deps packages are copied to /app directory
+COPY package.json package-lock.json /app/
+
+# install NPM app dependencies
+RUN npm install
+
+# bundle app source
+COPY . /app
+
+# build app
+RUN npm build
+
+# run the app
+CMD [ "npm", "run", "dev" ]

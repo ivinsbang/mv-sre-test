@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  dev_app:
+    build:
+      context: "."
+      dockerfile: "Dockerfile.dev"
+      args:
+        - "APP_ENV"
+        - "NEXT_PUBLIC_APP_VERSION"
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    environment:
+      - "APP_ENV=development"
+      - "NEXT_PUBLIC_APP_VERSION=v1.1.1"
+    ports:
+      - "3000:3000"
