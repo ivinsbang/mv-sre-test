@@ -1,9 +1,9 @@
 ARG DOCKER_BASE_IMAGE='node:erbium-alpine3.15'
 ARG APP_ENV="production"
-ARG NEXT_PUBLIC_APP_VERSION
 
 # prod base image
 FROM  $DOCKER_BASE_IMAGE AS prodbase
+ARG NEXT_PUBLIC_APP_VERSION
 
 # create app working directory
 RUN mkdir -p /app && chown node:node -R /app
@@ -33,9 +33,9 @@ RUN npm run build \
 FROM $DOCKER_BASE_IMAGE
 
 # shell variables at build-time
-ENV NEXT_PUBLIC_APP_VERSION=$NEXT_PUBLIC_APP_VERSION \
-    UNAME="node" \
-    APP_ENV=$APP_ENV
+ENV NEXT_PUBLIC_APP_VERSION=$NEXT_PUBLIC_APP_VERSION 
+ENV UNAME="node" 
+ENV APP_ENV=$APP_ENV
 
 # setup default node user
 USER ${UNAME}
