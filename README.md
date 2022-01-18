@@ -55,9 +55,11 @@ List the ready features here:
 
 - Deploy Production node image version 1.2.2
 
-`$ cd `
+`$ cd mv-sre-test`
 
-`$ docker build -f Dockerfile  --build-arg NEXT_PUBLIC_APP_VERSION=1.2.2 -t mv_node_prod_image .`
+`$ export NEXT_PUBLIC_APP_VERSION=v1.2.2 `
+
+`$ docker build -f Dockerfile  --build-arg NEXT_PUBLIC_APP_VERSION=$NEXT_PUBLIC_APP_VERSION -t mv_node_prod_image .`
 
 `$ docker run  -d -p 3001:3000 mv_node_prod_image `
 
